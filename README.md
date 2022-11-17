@@ -1,16 +1,18 @@
 Project TODO
 -------------
 
-1. Jasmine/Jason: Augur Implementation into VSCode
-2. Kaitlyn: Workflow automation for experiment pipeline
-	1. Auto hotkey - Windows only
-	2. xte, xdotool, ydotool - Linux
-3. Do experiments
-4. Data analysis
+1. Jasmine: Automate analysis of repositories
+2. Kaitlyn: Extension automation stuff
+	1. Top-1000 by install to see if anything weird in those?
+	2. Random subset of extensions from the store?
+	3. Look for potential typosquating or combosquatting in extension names or repositories?
+3. Jason: List of potential things to look for in repositories that might be doing weird stuff
+4. Do experiments
+5. Data analysis
 	1. Highlight key result/analysis points for paper
 	2. Graphics to display results
-5. Presentation
-6. Final paper
+6. Presentation
+7. Final paper
 
 # Workflow Automation - Environment Setup
 
