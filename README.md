@@ -2,19 +2,30 @@ Project TODO
 -------------
 
 1. Jasmine: Automate analysis of repositories
+	1. Generate possible list for manual analysis
 2. Kaitlyn: Extension automation stuff
-	1. Top-1000 by install to see if anything weird in those?
-	2. Random subset of extensions from the store?
-	3. Look for potential typosquating or combosquatting in extension names or repositories?
-3. Jason: List of potential things to look for in repositories that might be doing weird stuff
+	1. Get all possible extensions from the marketplace - done
+	2. Look for potential typosquating in extension names - done
+	3. Generate list of extensions where name/publisher differs from that of repo name?
+3. Jason
+	1. List of potential things to look for in repositories that might be doing weird stuff
+	2. Data analysis?
 4. Do experiments
 5. Data analysis
 	1. Highlight key result/analysis points for paper
 	2. Graphics to display results
-6. Presentation
-7. Final paper
+	3. % of extensions that are verified vs not
+	4. % of extensions where repo names did not match extension install names
+		1. What portion of these are not verified?
+		2. Install counts?
+	5. Some of these extensions are no longer maintained and/or source repos no longer exist -> Should be removed from the store!
 
-# Workflow Automation - Environment Setup
+# Extensions
+
+1. CSV of all extensions from the Marketplace as of Nov-19-2022: `full_allextensions_info.csv`
+2. List of similar extensions based on 1-2 character differences: `similar_extensions`
+
+# Workflow Automation - Environment Setup (NEED TO UPDATE)
 
 VSCode Linux Setup: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
 
@@ -33,38 +44,4 @@ Scripts for setup & start-up:
 ```sh
 setup.sh
 start.sh
-```
-
-## Extensions
-
-### Code Formatting Extensions
-
-```
-esbenp.prettier-vscode, redhat.vscode-yaml, HookyQR.beautify
-```
-
-### Enrivonment Themes
-
-```
-azemoh.one-monokai, GitHub.github-vscode-theme
-```
-
-### Run Projects
-
-```
-formulahendry.code-runner, ritwickdey.LiveServer
-```
-
-#### Run Jupyter Notebooks (Python) for Unit Tests
-
-Run jupyter notebook with Python and Jupyter extensions installed.
-
-```
-https://github.com/MubertAI/Mubert-Text-to-Music
-```
-
-### Static Code Analysis
-
-```
-dbaeumer.vscode-eslint, 
 ```

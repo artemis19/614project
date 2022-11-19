@@ -1,9 +1,13 @@
+"""
+POC to scrape extensions from the VSCode Marketplace
+"""
+
 import requests
 import csv
 import json
 
 
-def request_pages(page_num=1, page_size=800):
+def request_pages(page_num=1, page_size=300):
     json_data = {
         "filters": [
             {
@@ -44,7 +48,7 @@ extension_num = 0
 
 extensions = request_pages(1)["results"][0]["extensions"]
 
-with open("extensions_top800.csv", "w", newline="") as csvfile:
+with open("extensions_top300.csv", "w", newline="") as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=",", quoting=csv.QUOTE_ALL)
     spamwriter.writerow(
         ["Extension Name", "Publisher", "Verified", "Install Count", "Source Code"]
