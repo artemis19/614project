@@ -37,7 +37,7 @@ with open("full_allextensions_info.csv", newline="") as csvfile:
         installs.append(stats)
         repositories.append(repository)
 
-for p in itertools.combinations(extension_names, 2):
+for p in itertools.combinations(install_names, 2):
     distance = l_distance(p[0], p[1])
     if distance < 3 and distance != 0:
         if distance not in similar_exts.keys():
