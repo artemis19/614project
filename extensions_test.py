@@ -71,6 +71,7 @@ with open("full_allextensions_info.csv", "w", newline="") as csvfile:
             install_name = publisher_name + "." + extension["extensionName"]
             extension_name = extension["extensionName"]
             stats = 0
+            repository = "N/A"
             try:
                 stats = extension["statistics"][0]["value"]
             except:

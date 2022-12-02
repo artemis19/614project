@@ -1,5 +1,5 @@
 """
-Script to look for potential typosquatting in VSCode IDE extension names
+Script to look for potential typosquatting in VSCode IDE extensions by name and install name
 """
 import csv
 from Levenshtein import distance as l_distance
