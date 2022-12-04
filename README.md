@@ -30,6 +30,8 @@ Project TODO
 1. CSV of all extensions from the Marketplace as of Nov-19-2022: `full_allextensions_info.csv`
 2. List of similar extensions based on 1-2 character differences for the extension name: `similar_extensions_by_ext_name`
 3. List of similar extensions based on 1-2 character differences for the install name: `similar_ext_by_install_name`
+4. List of extensions that are deprecated or unmaintained `deprecated_extensions`
+5. List of extensions where the extension name, install name, and publisher do not appear in the source code repository listed (when available): `repo_name_analysis`
 
 ## Workflow Automation - Environment Setup (OLD)
 

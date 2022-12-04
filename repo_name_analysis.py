@@ -58,22 +58,27 @@ for i in range(len(install_names)):
     if repository != "n/a":
         if verified_ext == "False":
             # print(verified_ext)
-            if not extension in repository:
-                ext_pieces += publisher.split()
-                ext_pieces += publisher.split(".")
-                ext_pieces += publisher.split("-")
-                ext_pieces += install.split()
-                ext_pieces += install.split(".")
-                ext_pieces += install.split("-")
-                ext_pieces += extension.split()
-                ext_pieces += extension.split(".")
-                ext_pieces += extension.split("-")
-                good = False
-                # print(repository)
-                for piece in ext_pieces:
-                    # print(piece)
-                    if piece in repository:
-                        good = True
-                        continue
+            temp_repository = repository.replace("_", "")
+            temp_repository = temp_repository.replace("-", "")
+            temp_repository = temp_repository.replace(".", "")
+            ext_pieces += publisher.split()
+            ext_pieces += publisher.split(".")
+            ext_pieces += publisher.split("-")
+            ext_pieces += publisher.split("_")
+            ext_pieces += install.split()
+            ext_pieces += install.split(".")
+            ext_pieces += install.split("-")
+            ext_pieces += install.split("_")
+            ext_pieces += extension.split()
+            ext_pieces += extension.split(".")
+            ext_pieces += extension.split("-")
+            ext_pieces += extension.split("_")
+            good = False
+            # print(repository)
+            for piece in ext_pieces:
+                if piece in temp_repository:
+                    good = True
+                    continue
+            if not extension in temp_repository:
                 if not good:
                     print(row)
