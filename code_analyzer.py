@@ -47,12 +47,20 @@ with open("../full_allextensions_info.csv", newline="") as csvfile:
 
             results = []
             for pattern in analysis_patterns:
-                o = subprocess.run(["grep", "-r", "--include=*\.[jt]s", "--exclude=*/test*", "--exclude=*/build*", "--exclude=\.github*", pattern, folder],
-                                   capture_output=True)
-                results.append(len(o.stdout) != 0)
-                print(folder + ", " + pattern)
-                print(o.stdout)
-                print()
+                o = subprocess.run(
+                    [
+                        "grep", "-r", "--include=*\.[jt]s", "--exclude-dir=*test*",  "--exclude-dir=*tst*", "--exclude-dir=*build*",
+                        "--exclude-dir=*types*", "--exclude-dir=\.github*", pattern, folder
+                    ],
+                    capture_output=True
+                )
+                matched = len(o.stdout) != 0
+                results.append(matched)
+
+                if matched:
+                    print(folder + ", " + pattern)
+                    print(o.stdout)
+                    print()
 
             subprocess.run(["rm", "-rf", folder])
 
