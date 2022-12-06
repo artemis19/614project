@@ -43,7 +43,7 @@ with open("full_allextensions_info.csv", newline="") as csvfile:
         repositories.append(repository)
 
 for i, row in enumerate(rows):
-    if i < 34380:
+    if i < 34438:
         continue
     repository = repositories[rows.index(row)]
     # repository = "git clone https://daniele_mabiloft@bitbucket.org/mabiloft/grapes-vscode-extension.git"
@@ -77,9 +77,11 @@ for i, row in enumerate(rows):
         if "https: //" in repository:
             repository = repository.replace("https: //", "https://")
         if "hhttp" in repository:
-            repository = repository.replace("hhttp","http")
+            repository = repository.replace("hhttp", "http")
         if "http:/https://" in repository:
             repository = repository.replace("http:/https://", "https://")
+        if "https:www" in repository:
+            repository = repository.replace("https:www.", "https://")
         if "git@code.byted.org:" in repository:
             repository = repository.replace("git@code.byted.org:", "")
         if "com:" in repository:
@@ -89,9 +91,9 @@ for i, row in enumerate(rows):
         if "git@gitee.com:" in repository:
             repository = repository.replace("git@gitee.com:", "")
         if "git remote add origin " in repository:
-            repository = repository.replace("git remote add origin ","")
+            repository = repository.replace("git remote add origin ", "")
         if "git clone " in repository:
-            repository = repository.replace("git clone ","")
+            repository = repository.replace("git clone ", "")
         if (
             "https://github.com/git@github.com:UncleBill/vscode-prisme.git.git"
             in repository
@@ -103,7 +105,10 @@ for i, row in enumerate(rows):
         if "https:/example.com" in repository:
             repository = repository.replace("https:/example.com", "https://example.com")
         if "https:/github.com/cdonke/github-explorer" in repository:
-            repository = repository.replace("https:/github.com/cdonke/github-explorer", "https://github.com/cdonke/github-explorer")
+            repository = repository.replace(
+                "https:/github.com/cdonke/github-explorer",
+                "https://github.com/cdonke/github-explorer",
+            )
         if repository.startswith("github.com"):
             repository = "https://" + repository
         # print(repository)
