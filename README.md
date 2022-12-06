@@ -32,6 +32,10 @@ Project TODO
 3. List of similar extensions based on 1-2 character differences for the install name: `similar_ext_by_install_name`
 4. List of extensions that are deprecated or unmaintained `deprecated_extensions`
 5. List of extensions where the extension name, install name, and publisher do not appear in the source code repository listed (when available): `repo_name_analysis`
+6. 404's, timeouts, unavailable repos: `repos_404_timesouts_final`
+	1. This link was used for multiple extensions: `ssh://git@gitlab.xiaxuechao.com:902/vscode/laravel-extension-pack.git`
+	2. Weird source: `https://www.520stone.com`
+	3. Empty repo but does resolve: `github.com/jakubDoka/metaflow`
 
 ## Workflow Automation - Environment Setup (OLD)
 
