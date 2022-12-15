@@ -43,8 +43,8 @@ with open("full_allextensions_info.csv", newline="") as csvfile:
         repositories.append(repository)
 
 for i, row in enumerate(rows):
-    if i < 34438:
-        continue
+    # if i < 34438:
+    #     continue
     repository = repositories[rows.index(row)]
     # repository = "git clone https://daniele_mabiloft@bitbucket.org/mabiloft/grapes-vscode-extension.git"
     if repository != "N/A" and repository != "Source Code":
